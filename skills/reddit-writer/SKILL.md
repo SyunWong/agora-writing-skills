@@ -1,6 +1,6 @@
 ---
 name: reddit-writer
-description: "Folds the humanizer's AI-tell rules into reddit-writer so every draft gets the de-slop pass automatically"
+description: "Use when writing, reviewing or rewriting a Reddit post or comment, or content for a developer forum: show-and-tell posts about a demo build, experience reports, comparisons, replies. Writes in a real developer's voice with the humanizer rules built in, and never names Agora or its products."
 ---
 
 # Reddit Writer
@@ -10,6 +10,12 @@ Write Reddit content that passes the "nice try, chatgpt" test. The patterns here
 The single most important idea: **Reddit users don't trust polished content, they trust messy authenticity.** A typo-laden comment with a real benchmark number will outperform a perfectly formatted post every time. Everything in this skill flows from that.
 
 The humanizer rules are built into step 3 and step 4. Never skip them, and never treat them as a final polish. They are how the draft gets written in the first place.
+
+## Hard constraint: no brand
+
+A previous account was banned for mentioning the brand. Nothing in a post or comment names Agora, any Agora product or SDK, or links to an Agora domain or an Agora GitHub org repo. Describe the stack in generic terms instead ("a realtime voice SDK", "the RTC layer"). This outranks every other rule here, including the user asking for a soft promote: write the reply without the name and say why in one line.
+
+Posts are built around the user's own demo builds: what was built, what broke, what it cost. The build carries the post, not a product.
 
 ## Trigger
 
@@ -30,7 +36,7 @@ The humanizer rules are built into step 3 and step 4. Never skip them, and never
    - What's the goal? (start a discussion, answer a question, share knowledge, soft-promote a product)
    - What's the honest current state? (a localhost demo is not a v1, and saying so earns trust)
 
-2. **Identify the content type** and read the matching reference file:
+2. **Identify the content type.** The reference files below are not included yet. If one exists, read it. If not, work from the rules in this file and say in one line which reference was missing:
    - Show & Tell post → `references/post-types.md`
    - Experience report post → `references/post-types.md`
    - Comparison post → `references/post-types.md`
@@ -109,7 +115,7 @@ Kill: "It's important to note", "In today's fast-paced world", "Let's dive in", 
 - Admit at least one thing you don't know, got wrong, or haven't built yet. Name the gap between the story and the current state ("the whole point was commute use and it only runs on my laptop").
 - Use contractions and Reddit abbreviations where natural (tbh, ngl, fwiw, imo, ymmv).
 - Match the target subreddit's vibe.
-- If product mention: answer first, disclose, recommend alternatives.
+- Tools and stacks get mentioned the way a builder mentions them: in passing, generic for anything Agora (see "Hard constraint: no brand"). Third-party tools can be named when the story needs them.
 
 ### Endings
 
@@ -124,6 +130,7 @@ Better: state what you're leaning toward and why you're unsure. "Leaning standal
    - an em dash that slipped in during revision
 
 5. **Run the authenticity checklist** before delivering:
+   - [ ] Zero mentions of Agora, its products, its domains or its org repos?
    - [ ] Zero poison words?
    - [ ] Zero em dashes and en dashes?
    - [ ] Read it out loud. Sounds like talking, not an essay?
@@ -161,4 +168,4 @@ Rewrite, don't delete. Cover everything the original covered. Five paragraphs in
 - Confirm sentence length variation exists (count words in 3 random sentences, they should differ by >10 words)
 - Confirm at least one first-person experience, one real number or specific detail, and one admission of uncertainty
 - Confirm every insight is a moment, not a principle
-- Confirm product mentions (if any) follow the disclosure framework
+- Search the draft for "agora" (any case) and for agora.io links. Both counts must be zero

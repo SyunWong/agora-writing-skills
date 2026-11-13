@@ -35,7 +35,7 @@ Rules marked `(provisional)` come from one post and get confirmed or dropped aft
 
 - `humanizer`'s Chinese layer loads reference files from the 内容生产 project in claude.ai. Those files aren't in this repo, so outside that project the Chinese rules run from the summary in `SKILL.md` only.
 - `tech-reference-writer` template B is based on one post (Voice AI interruption handling). Check whether its core section holds up on a topic with only one or two decisions.
-- `reddit-writer`'s description reads like a change note, not a trigger. It may load less reliably than the others.
+- `reddit-writer` points to three reference files (`post-types.md`, `comment-types.md`, `anti-slop.md`) that were never added. Until they are, it runs from the rules in its `SKILL.md` and says which file was missing.
 
 ## Changing a skill
 
