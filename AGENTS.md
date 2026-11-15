@@ -46,20 +46,24 @@ No agent pushes to `main`. No agent commits secrets, API keys, internal test dat
 
 ## Content workflow
 
-Every blog post goes through the same five stages. A stage is done when its output exists.
+Every blog post goes through the same six stages. A stage is done when its output exists.
 
 | Stage | Who | Output |
 | --- | --- | --- |
-| 1. Brief | June, with Claude | Format, target query, reader, the material in hand |
-| 2. Draft | The matching writing skill | Draft plus a list of open `[CONFIRM]` items |
-| 3. Review | `content-reviewer`, in a fresh context that did not write the draft | Scorecard: score out of 100, fix list ranked by points, score if fixed |
-| 4. Revise | Writer for writer fixes. June and engineering for the rest | New draft, then back to stage 3 |
-| 5. Publish and check | June ships. OpenClaw collects 48-hour and 30-day numbers | Score and results logged in `decisions/log.md` |
+| 1. Brief | June, with Claude | Format, target query, reader |
+| 2. Brief scan | `content-reviewer` in brief-scan mode | What the top pages have, a material checklist with owners, and a go or wait call |
+| 3. Draft | The matching writing skill, once the call is go | Draft plus one numbered list of open `[CONFIRM]` items |
+| 4. Review | `content-reviewer`, in a fresh context that did not write the draft | Scorecard: raw and capped score, fix list ranked by points, score if fixed, log line |
+| 5. Revise | Writer for writer fixes. June and engineering for the rest | New draft, then a follow-up review of the changed lines |
+| 6. Publish and check | June ships. Her metrics agent collects results | The scorecard's log line in `decisions/log.md`, results added by the metrics agent |
 
 Rules:
 
-- The writer never scores its own draft. Scores come from stage 3 only.
+- The writer never scores its own draft. Scores come from stage 4 only.
+- No drafting on a wait call. Get the named material first. Most low scores are missing material, and it is cheapest to get before the draft exists.
 - Publish at 85 or above with no cap in force. Between 70 and 84, revise. Under 70, the piece needs new material before more editing.
+- A piece with no first-hand evidence (a measurement with its method, an observed result, a failure the author hit) is capped at 84.
+- Open `[CONFIRM]` items go to engineering as one message with a due date, three working days by default. On the due date June decides per item: wait, or cut or reword the sentence so it claims nothing unconfirmed. Nothing ships with an open mark.
 - Two review rounds at most. If the score is still under 85 after the second, the gap is missing material: take the "can't be fixed by editing" list to whoever can supply it.
 
 ## Publishing flow
