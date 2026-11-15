@@ -44,6 +44,24 @@ No agent pushes to `main`. No agent commits secrets, API keys, internal test dat
 6. When the source material is too thin for a good piece, say what is missing and who could supply it. Don't pad.
 7. Product names follow `context/messaging.md` exactly.
 
+## Content workflow
+
+Every blog post goes through the same five stages. A stage is done when its output exists.
+
+| Stage | Who | Output |
+| --- | --- | --- |
+| 1. Brief | June, with Claude | Format, target query, reader, the material in hand |
+| 2. Draft | The matching writing skill | Draft plus a list of open `[CONFIRM]` items |
+| 3. Review | `content-reviewer`, in a fresh context that did not write the draft | Scorecard: score out of 100, fix list ranked by points, score if fixed |
+| 4. Revise | Writer for writer fixes. June and engineering for the rest | New draft, then back to stage 3 |
+| 5. Publish and check | June ships. OpenClaw collects 48-hour and 30-day numbers | Score and results logged in `decisions/log.md` |
+
+Rules:
+
+- The writer never scores its own draft. Scores come from stage 3 only.
+- Publish at 85 or above with no cap in force. Between 70 and 84, revise. Under 70, the piece needs new material before more editing.
+- Two review rounds at most. If the score is still under 85 after the second, the gap is missing material: take the "can't be fixed by editing" list to whoever can supply it.
+
 ## Publishing flow
 
 - One ClickUp ticket per website blog post. The ticket notifies design for the cover image.

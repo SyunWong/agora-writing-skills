@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-15 (2)
+
+- New skill `content-reviewer`: an independent reviewer that scores a draft out of 100 (needs met, main content quality, trust, findable and citable, voice), applies caps, and returns a fix list ranked by points gained with an owner for each fix. Rubric follows Google's helpful-content guidance and the Search Quality Rater Guidelines. Weights are provisional until five published pieces can be compared with results.
+- `AGENTS.md`: added the five-stage content workflow (brief, draft, review, revise, publish and check). The writer no longer scores its own draft.
+
 ## 2026-11-15
 
 Shared agent context:
