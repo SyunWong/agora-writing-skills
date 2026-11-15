@@ -1,6 +1,6 @@
 # Agora writing skills
 
-Claude skills the Agora DevX team uses to write developer content: tech references, scenario posts, launch copy and Reddit posts. Each skill is a folder with a `SKILL.md`. Claude loads it when a request matches the skill's description.
+Claude skills the Agora DevX team uses to write developer content: tech references, scenario posts, launch copy, Reddit posts, launch videos and messages to colleagues. The repo also holds the shared context that every AI agent on the team reads (see "Shared agent context"). Each skill is a folder with a `SKILL.md`. Claude loads it when a request matches the skill's description.
 
 Maintainer: June Wang. Private repo, internal use.
 
@@ -13,6 +13,8 @@ Maintainer: June Wang. Private repo, internal use.
 | One post per voice agent scenario repo (the Top 10 series) | `scenario-blog-writer` | Includes a distribution plan |
 | Launch posts, X posts, changelogs, release notes, launch weeks | `dev-marketing-writer` | Patterns from Vercel, Supabase, Linear, Resend, Cursor, Stripe |
 | Reddit posts and comments | `reddit-writer` | Never names Agora or its products |
+| A 30 to 60 second promo video for a launch | `launch-video` | House look and storyboard-first process. Based on one video, provisional |
+| A Slack, ClickUp, Lark or email message to a colleague | `work-message-polish` | Separates required fixes from optional style changes |
 | Anything that gets sent, posted or published | `humanizer` | The other skills call it for voice. Install it with any of them |
 
 Not covered yet: tutorials and recipe walkthroughs (scenario description, then code).
@@ -35,7 +37,20 @@ Rules marked `(provisional)` come from one post and get confirmed or dropped aft
 
 - `humanizer`'s Chinese layer loads reference files from the 内容生产 project in claude.ai. Those files aren't in this repo, so outside that project the Chinese rules run from the summary in `SKILL.md` only.
 - `tech-reference-writer` template B is based on one post (Voice AI interruption handling). Check whether its core section holds up on a topic with only one or two decisions.
-- `reddit-writer` points to three reference files (`post-types.md`, `comment-types.md`, `anti-slop.md`) that were never added. Until they are, it runs from the rules in its `SKILL.md` and says which file was missing.
+- `launch-video` is based on one video (the Agora AI Developer Toolkit promo). Check the recording-led structure and the six-shot order against the next launch.
+- `work-message-polish` names the colleagues June writes to most. Anyone else using it should swap in their own.
+
+## Shared agent context
+
+`AGENTS.md` is the entry point for OpenClaw, Codex and Claude. It sets the read order, who may edit what, and the rules every agent follows.
+
+| Path | Holds | Edited by |
+| --- | --- | --- |
+| `context/` | Positioning, messaging and terminology, audience, voice | June, by pull request |
+| `state/priorities.md` | What is in flight this week | OpenClaw |
+| `decisions/log.md` | Dated decisions, append only | Any agent, June |
+
+Lines marked `[JUNE: confirm]` in `context/` and `state/` were filled from working notes and haven't been checked yet.
 
 ## Changing a skill
 
