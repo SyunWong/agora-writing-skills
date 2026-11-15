@@ -36,15 +36,7 @@ Posts are built around the user's own demo builds: what was built, what broke, w
    - What's the goal? (start a discussion, answer a question, share knowledge, soft-promote a product)
    - What's the honest current state? (a localhost demo is not a v1, and saying so earns trust)
 
-2. **Identify the content type.** The reference files below are not included yet. If one exists, read it. If not, work from the rules in this file and say in one line which reference was missing:
-   - Show & Tell post → `references/post-types.md`
-   - Experience report post → `references/post-types.md`
-   - Comparison post → `references/post-types.md`
-   - Feedback request post → `references/post-types.md`
-   - Helpful reply → `references/comment-types.md`
-   - Soft-promote reply → `references/comment-types.md`
-   - Discussion reply → `references/comment-types.md`
-   - Review/audit of draft → `references/anti-slop.md`
+2. **Identify the content type** and use the matching pattern from "Post types" or "Comment types" near the end of this file. For a review or audit of an existing draft, there is no separate pattern: run steps 3 to 5 on it and say what you changed.
 
 3. **Draft, applying ALL anti-slop rules below.**
 
@@ -145,6 +137,42 @@ Better: state what you're leaning toward and why you're unsure. "Leaning standal
    - [ ] Would a Reddit vet reply "nice try, chatgpt"? If yes → rewrite.
 
 6. **Offer two variants** when the user hasn't already converged: a shorter/punchier version and a longer/more detailed version. Once they've picked a direction, iterate on that one rather than re-offering options.
+
+## Post types
+
+Pick one. A post that tries to be two of these reads as marketing.
+
+**Show and tell.** The default for a demo build. The video or GIF is the post, uploaded straight to Reddit and never linked out, because native video gets watched and a link gets skipped. The title says what the thing does in plain words, with no adjectives. The body is two to five sentences: what it is, one odd detail, the honest current state. Leave the build details out unless someone asks in the comments, then answer there. Short beats thorough here, and the body should never be louder than the video.
+
+**Experience report.** What you set out to do, what broke, what it cost in hours or money, where it stands now. Order it as it happened. One real number minimum. The failure gets more room than the fix.
+
+**Comparison.** Only for things you ran yourself. Say what you tested, on what, and what you didn't test. Give the result per case and let the reader total it. Never crown a winner on something you haven't measured, and never compare against the stack you work on.
+
+**Feedback request.** Ask one question about one decision, after showing enough of the work that answering is easy. State what you're leaning toward. "Thoughts?" is not a question.
+
+**Game or media take.** For posts in a game's own subreddit: a score in the title if you have one, what worked, what didn't, one closing line. Readers there know the references, so don't explain them.
+
+**Update on an earlier post.** A fix or a new version goes into the original post as a short edit at the top, so new readers and search see it. People who asked for the thing get a direct reply, because replies notify and edits don't. If the post is more than a few days old or the change is big, write a new post and link back. Never add a link to a post after it took off. That reads as bait and gets removed. Work that belongs to another community (a hardware port, for example) gets its own post in that subreddit when it's far enough along.
+
+## Comment types
+
+**Helpful reply.** Answer the question in the first sentence. Then the one detail that makes the answer usable: the setting, the number, the gotcha. Stop there.
+
+**Me-too with a difference.** Someone describes an experience and yours differs. Don't dispute theirs. Say what happens on your side and what you changed, if anything. "never got mine past 5 minutes" is a contribution. "that can't be right" isn't.
+
+**Reply that mentions your own build.** This replaces the old soft-promote reply. Answer first, then mention the build only if it's evidence for the answer, in generic terms and with no name (see "Hard constraint: no brand"). If the answer stands without the mention, cut the mention.
+
+**Discussion reply.** One opinion and the reason you hold it. Agreeing is fine if you add the case that convinced you.
+
+**Joke or riff.** In hobby subreddits, one line, built on the sub's own vocabulary. Check the terms are right before posting (card names, mechanics, character names). A wrong term kills the joke.
+
+**Permission ask.** When asking to repost someone's work elsewhere: one or two sentences, offer credit and a tag, ask for their handle. Skip the paragraph about who you are if the subreddit has self-promotion rules.
+
+## Posting notes
+
+- Typos get fixed in the first few minutes, before the "edited" tag shows.
+- One subreddit per post, staggered over days. Cross-posting the same text the same day gets flagged.
+- If the user works on the stack behind a demo and someone asks directly, the answer is a short factual disclosure in the comments, still without a link.
 
 ## Do not over-correct
 

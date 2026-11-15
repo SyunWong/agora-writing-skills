@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-11-15
+
+Shared agent context:
+
+- Added `AGENTS.md`, `context/` (positioning, messaging, audience, voice), `state/priorities.md` and `decisions/log.md`, so OpenClaw, Codex and Claude start from the same facts and handoffs stop depending on pasted prompts.
+
+`reddit-writer`:
+
+- Post types, comment types and posting notes are now sections in `SKILL.md`. The three reference files it pointed to were never written, and a single file keeps the copy in Claude and the copy here identical.
+- Added patterns learned from real posts: updates to an earlier post, me-too replies, joke replies in hobby subreddits, permission asks.
+- "Soft-promote reply" became "reply that mentions your own build", with no name, to match the no-brand rule.
+
+New skills:
+
+- `work-message-polish`: short messages to colleagues. Six layers (job, facts, the ask, what stays inside the team, voice, length) and a delivery format that keeps required fixes apart from optional style changes.
+- `launch-video`: promo videos for launches. Storyboard-first process, the house look settled on the toolkit video with its rejected list, and render notes. Provisional.
+
 ## 2026-11-13 (2)
 
 `reddit-writer`:
