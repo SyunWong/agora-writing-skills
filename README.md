@@ -15,6 +15,7 @@ Maintainer: June Wang. Private repo, internal use.
 | Reddit posts and comments | `reddit-writer` | Never names Agora or its products |
 | A 30 to 60 second promo video for a launch | `launch-video` | House look and storyboard-first process. Based on one video, provisional |
 | A Slack, ClickUp, Lark or email message to a colleague | `work-message-polish` | Separates required fixes from optional style changes |
+| Scoring a draft or a live page and getting a ranked fix list | `content-reviewer` | Separate from the writer. 100-point rubric built on Google's content quality guidance. Weights provisional |
 | Anything that gets sent, posted or published | `humanizer` | The other skills call it for voice. Install it with any of them |
 
 Not covered yet: tutorials and recipe walkthroughs (scenario description, then code).

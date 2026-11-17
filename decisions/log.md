@@ -16,3 +16,6 @@ Format: `YYYY-MM-DD | area | decision | rejected or still open`
 2026-11-13 | reddit | Reddit content never names Agora or its products | Old "disclose and recommend alternatives" rule removed
 2026-11-15 | repo | Shared agent context (AGENTS.md, context/, state/, decisions/) lives in this repo with the skills | A separate devrel-context repo, open if this one gets crowded
 2026-11-15 | skills | Added work-message-polish and launch-video. reddit-writer now carries its post and comment patterns inline | The three planned reference files are dropped
+2026-11-15 | workflow | Drafts are scored by content-reviewer in a fresh context, never by the writer. Publish at 85 or above with no cap | Rubric weights provisional until five pieces have results
+2026-11-15 | workflow | Brief scan runs before drafting, with a go or wait call. No first-hand evidence caps a piece at 84. Open confirms go out as one message with a due date | Rubric v2 not yet checked for repeatability
+2026-11-15 | review | Voice AI interruption handling draft | target query: voice AI interruption handling | rubric v1: raw 80, capped 79 (open confirms)

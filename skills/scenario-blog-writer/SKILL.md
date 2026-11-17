@@ -1,6 +1,6 @@
 ---
 name: "scenario-blog-writer"
-description: "Use when drafting, reviewing or scoring an Agora voice agent scenario blog post (the Top 10 use-case series, e.g. customer support, hotel reception) or planning how to publish and distribute one."
+description: "Use when drafting or revising an Agora voice agent scenario blog post (the Top 10 use-case series, e.g. customer support, hotel reception) or planning how to publish and distribute one."
 ---
 
 # Scenario blog writer
@@ -42,7 +42,7 @@ Then report to June before writing, in this form:
 
 - **Verdict**: ready, or draftable with gaps, or not worth drafting yet.
 - **What to ask engineering for**: a numbered list she can forward as is. Each item says what to add, in which file, and which section of the post it unlocks.
-- **Effect on the post**: which sections will be thin or left as `[TBD]` if nothing changes, and a rough score with and without the additions.
+- **Effect on the post**: which sections will be thin or left as `[TBD]` if nothing changes, and which lines of the `content-reviewer` rubric it will cost.
 
 Sort the asks into two groups: ones that block a good post (no scenario-specific flow, prompt copied from a sibling) and ones that raise it (signature tool, real call).
 
@@ -160,6 +160,10 @@ These are the drifts to watch for. Each one happened or nearly happened on the f
 - Keyword stuffing after an SEO review. Variants appear once each.
 - Filling a `[TBD]` with a plausible guess.
 
-## Scoring a draft
+## Handing off for review
 
-When asked to rate a post, score these separately out of 10 and say what would raise each: answer-first extractability, structure, uniqueness against the current top results (search first), match to what the searcher expects the agent to do, evidence (real transcript, video, tool), keyword coverage. Report page quality and the odds of being found as two different things. The second depends on domain, links and distribution, which the draft can't fix. Where a low score traces back to the repo, say so and give the ask for engineering.
+This skill doesn't score its own drafts. When a draft is ready, or when June asks how good a post is, hand it to `content-reviewer` with the format (scenario post), the target query and the reader. Deliver the draft with its numbered `[CONFIRM]` list and stop there.
+
+Before drafting, if `content-reviewer` has run a brief scan, use its material checklist in the readiness check above. If it hasn't, ask for one.
+
+When a scorecard comes back, apply the fixes marked "writer" and nothing else. Fixes marked June or engineering go to them as written. Don't predict the new score. The follow-up review gives it.

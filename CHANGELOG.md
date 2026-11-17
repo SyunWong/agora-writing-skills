@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-11-15 (3)
+
+After the first real run of `content-reviewer` (the interruption handling draft, 79 capped from 80) and the reviewer's own notes on the rubric:
+
+- `content-reviewer` version 2. New brief-scan mode before drafting. Anchors rewritten so they don't overlap (A3) and have middle values (B1, B2, B3, B4, C1, C2). Full marks on originality now need first-hand evidence, and a piece with none is capped at 84. New cap for a Recipe or code sample that disagrees with the docs. AI tells are counted as patterns, with answer-first sentences and bolded definition terms exempt in reference pieces. Draft-stage D lines are provisional. "Score if fixed" reports raw and capped. Follow-up reviews rescore changed lines only and reuse the top-pages table. New layer for open confirms. The scorecard ends with a log line for the metrics agent.
+- `AGENTS.md`: workflow is now six stages with the brief scan as stage 2, a go or wait gate before drafting, and a fixed rule for open confirms. Results after publishing are collected by June's metrics agent.
+- `tech-reference-writer` and `scenario-blog-writer`: removed "Scoring a draft". They hand drafts to `content-reviewer` and apply only writer fixes from the scorecard.
+
+## 2026-11-15 (2)
+
+- New skill `content-reviewer`: an independent reviewer that scores a draft out of 100 (needs met, main content quality, trust, findable and citable, voice), applies caps, and returns a fix list ranked by points gained with an owner for each fix. Rubric follows Google's helpful-content guidance and the Search Quality Rater Guidelines. Weights are provisional until five published pieces can be compared with results.
+- `AGENTS.md`: added the five-stage content workflow (brief, draft, review, revise, publish and check). The writer no longer scores its own draft.
+
 ## 2026-11-15
 
 Shared agent context:

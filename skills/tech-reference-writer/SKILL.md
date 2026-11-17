@@ -1,6 +1,6 @@
 ---
 name: "tech-reference-writer"
-description: "Use when drafting, reviewing or scoring an Agora tech reference blog post: a concept explainer, an X vs Y comparison, a troubleshooting piece, or a product-tied reference with code on voice agent technology (e.g. WebRTC vs WebSocket, turn detection, interruption handling, reducing latency)."
+description: "Use when drafting or revising an Agora tech reference blog post: a concept explainer, an X vs Y comparison, a troubleshooting piece, or a product-tied reference with code on voice agent technology (e.g. WebRTC vs WebSocket, turn detection, interruption handling, reducing latency)."
 ---
 
 # Tech reference writer
@@ -50,7 +50,7 @@ Then report to June before writing, in this form:
 
 - **Verdict**: ready, or draftable with gaps, or not worth drafting yet.
 - **What to get**: a numbered list she can forward as is. Each item says what, from whom, and which section or score it unlocks.
-- **Effect on the post**: which sections will be thin or carry `[TBD]`, and a rough score with and without the additions.
+- **Effect on the post**: which sections will be thin or carry `[TBD]`, and which lines of the `content-reviewer` rubric it will cost.
 
 Sort the asks into ones that block a good post (no unique angle, no reviewer) and ones that raise it (measured number, name clearance).
 
@@ -219,12 +219,10 @@ These happened on the first template B post.
 - The docs page, the API reference and the recipe each naming a field differently, found only after drafting.
 - Tables lost in export, leaving "use one of these values:" with nothing under it.
 
-## Scoring a draft
+## Handing off for review
 
-When asked to rate a post, search the primary query first, then score these separately out of 10 and say what would raise each: answer-first extractability, structure against this template, uniqueness against the current top results, match to search intent, evidence, keyword and entity coverage, trust (byline, reviewer, sources).
+This skill doesn't score its own drafts. When a draft is ready, or when June asks how good a post is, hand it to `content-reviewer` with the format (tech reference), the target query and the reader. Deliver the draft with its numbered `[CONFIRM]` list and stop there.
 
-Split the scores into two groups: what the draft can fix (answer, structure, intent, keywords) and what needs someone else (evidence, trust). For the second group, give the ask and who to send it to. Report page quality and the odds of being found as two different things. The second depends on domain, links and distribution, which the draft can't fix.
+Before drafting, if `content-reviewer` has run a brief scan, use its material checklist in the readiness check above. If it hasn't, ask for one.
 
-When the draft still carries `[CONFIRM]` marks, give two numbers: the score if every mark is confirmed as written, and the score if it ships with them open. Unverified configuration on the official blog costs more than a missing section. Rescore after each round of answers and say which item moved which number.
-
-Include a competitor table: page, stance, what it does well, what it lacks.
+When a scorecard comes back, apply the fixes marked "writer" and nothing else. Fixes marked June or engineering go to them as written. Don't predict the new score. The follow-up review gives it.
